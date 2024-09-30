@@ -1,3 +1,5 @@
+import { permanentRedirect } from "next/navigation";
+
 export default function Page() {
-    return <div>Hello World</div>;
+    permanentRedirect("/auth/login");
 }
