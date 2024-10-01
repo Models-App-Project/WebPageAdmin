@@ -28,7 +28,6 @@ function ResetPassword() {
           <Button type="submit">Submit</Button>
 
           <Link href="/auth/login" className="text-gray-900  py-2 px-4  rounded flex items-center justify-center focus:outline-none">
-            {/* <IoArrowBackSharp size={18} /> */}
 
             <FontAwesomeIcon icon={faArrowLeft} className='w-4 h-4'/>
             Back to log in
