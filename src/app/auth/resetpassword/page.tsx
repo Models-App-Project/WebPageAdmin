@@ -4,6 +4,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Button from '../components/button';
 
 
 function ResetPassword() {
@@ -24,8 +25,11 @@ function ResetPassword() {
             className="w-full px-4 py-2 mb-6 bg-transparent border-0 border-b border-gray-600 focus:outline-none"
           />
 
+          <Button type="submit">Submit</Button>
+
           <Link href="/auth/login" className="text-gray-900  py-2 px-4  rounded flex items-center justify-center focus:outline-none">
             {/* <IoArrowBackSharp size={18} /> */}
+
             <FontAwesomeIcon icon={faArrowLeft} className='w-4 h-4'/>
             Back to log in
           </Link>
