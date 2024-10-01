@@ -14,7 +14,7 @@ function ResetPassword() {
     <>
       <div className="container  mx-auto px-4 py-12 flex flex-col items-center justify-center">
         <h1 className="text-4xl text-black font-bold mb-6">Forgot Password?</h1>
-        <p className="text-gray-400 text-lg mb-10">No worries, we'll send you reset instructions.</p>
+        <p className="text-gray-400 text-lg mb-10">No worries, we will send you reset instructions.</p>
 
         <form className="flex flex-col space-y-4 w-full max-w-md">
           <input

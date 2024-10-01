@@ -39,7 +39,7 @@ const Login = () => {
                 <Button type="submit">Submit</Button>
 
                 <p className="mt-6 text-center text-gray-400">
-                Don't have an account yet?{' '}
+                Do not have an account yet?{' '}
                 <Link href="#" className="text-blue-600 hover:underline">
                 Sign up
                 </Link> 
