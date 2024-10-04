@@ -7,7 +7,7 @@ const AuthLayout = ({
 }>) => {
     return (
         <div className="w-full h-screen flex overflow-hidden">
-            <div className="w-[64%] flex flex-col items-center pt-8">
+            <div className="w-[64%] flex flex-col items-center pt-3">
                 <Image src="/brand.jpg" width={302} height={105} alt="Logo" />
                 {children}
             </div>
