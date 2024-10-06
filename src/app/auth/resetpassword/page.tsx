@@ -6,8 +6,15 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Button from "../components/button";
 
-function ResetPassword() {
-    const [email, setEmail] = useState("");
+
+    type RegisterInputProps = {
+        email: string; 
+    };
+    
+    const ResetPassword = () => {
+        const [inputStates, setInputStates] = useState<RegisterInputProps>({
+            email: "",
+    });
 
     return (
         <>
@@ -23,8 +30,13 @@ function ResetPassword() {
                     <input
                         type="email"
                         placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)} // Adicionar o onChange para atualizar o estado
+                        value={inputStates.email}
+                        onChange={(e) =>
+                            setInputStates((state) => ({
+                                ...state,
+                                email: e.target.value,
+                            }))
+                        } // Adicionar o onChange para atualizar o estado
                         className="w-full px-4 py-2 mb-6 bg-transparent border-0 border-b border-gray-600 focus:outline-none"
                     />
 
