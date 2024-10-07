@@ -3,7 +3,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import store from "../redux/store";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 
 const poppins = Poppins({ weight: "500", subsets: ["latin"] });
 
