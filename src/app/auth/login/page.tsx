@@ -8,7 +8,6 @@ import Button from "../components/button";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
     return (
         <div className="container h-full text-black dark:text-white flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold text-center  mb-2 dark:text-white">
