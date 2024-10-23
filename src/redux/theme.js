@@ -15,9 +15,17 @@ export const themeSlice = createSlice({
                 : (state.value = "light");
             localStorage.setItem("theme", state.value);
         },
+        setLight: (state) => {
+            state.value = "light";
+            localStorage.setItem("theme", state.value);
+        },
+        setDark: (state) => {
+            state.value = "dark";
+            localStorage.setItem("theme", state.value);
+        },
     },
 });
 
-export const { toggleTheme } = themeSlice.actions;
+export const { toggleTheme, setDark, setLight } = themeSlice.actions;
 
 export default themeSlice.reducer;

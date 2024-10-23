@@ -1,7 +1,8 @@
 "use client";
 
-import { toggleTheme } from "@/redux/theme";
+import { setDark, setLight, toggleTheme } from "@/redux/theme";
 import Image from "next/image";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const AuthLayout = ({
@@ -28,6 +29,7 @@ const AuthLayout = ({
         >
             <div className="w-[64%] flex flex-col items-center pt-3 ">
                 <Image
+                    className="w-auto h-auto"
                     src={`${theme == "dark" ? "/darkBrand.png" : "/brand.jpg"}`}
                     width={302}
                     height={105}

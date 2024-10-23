@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Input from "../components/Input";
 import Link from "next/link";
 import Button from "../components/button";
+import { redirect } from "next/navigation";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -43,7 +44,9 @@ const Login = () => {
                     </p>
                 </div>
 
-                <Button type="submit">Submit</Button>
+                <Link href={"/dashboard"}>
+                    <Button type="submit">Submit</Button>
+                </Link>
 
                 <p className="mt-6 text-center text-gray-400">
                     Do not have an account yet?{" "}
