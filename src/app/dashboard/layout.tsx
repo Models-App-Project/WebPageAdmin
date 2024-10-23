@@ -14,7 +14,6 @@ const DashboardLayout = ({
             };
         }) => state.theme.value
     );
-    const dispatch = useDispatch();
     return (
         <div
             className={`w-full h-screen bg-white ${
