@@ -59,7 +59,6 @@ const DashboardLayout = ({
         },
     ];
 
-    const dispatch = useDispatch();
     return (
         <div
             className={`w-full h-screen bg-white ${
