@@ -1,5 +1,5 @@
 "use client";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Image from "next/image";
 import SideBarItems from "./components/SideBarItems";
 import NavBar from "./components/NavBar";
@@ -21,19 +21,19 @@ const DashboardLayout = ({
     const menuItems = [
         {
             name: "Models",
-            href: "dashboard/models",
+            href: "/dashboard",
             lightIcon: "/lightModelsIcon.png",
             darkIcon: "/darkModelsIcon.png",
         },
         {
             name: "Requests",
-            href: "dashboard/requests",
+            href: "/dashboard/requests",
             lightIcon: "/lightRequestIcon.png",
             darkIcon: "/darkRequestIcon.png",
         },
         {
             name: "Account",
-            href: "dashboard/account",
+            href: "/dashboard/account",
             lightIcon: "/lightProfileIcon.png",
             darkIcon: "/darkProfileIcon.png",
         },
@@ -41,19 +41,19 @@ const DashboardLayout = ({
     const supportItems = [
         {
             name: "Settings",
-            href: "dashboard/settings",
+            href: "/dashboard/settings",
             lightIcon: "/lightSettingsIcon.png",
             darkIcon: "/darkSettingsIcon.png",
         },
         {
             name: "Help",
-            href: "dashboard/help",
+            href: "/dashboard/help",
             lightIcon: "/lightHelpIcon.png",
             darkIcon: "/darkHelpIcon.png",
         },
         {
             name: "Dark Mode",
-            href: "/#",
+            href: "",
             lightIcon: "/lightThemeIcon.png",
             darkIcon: "/darkThemeIcon.png",
         },
@@ -91,7 +91,23 @@ const DashboardLayout = ({
                         SUPPORT
                     </div>
                     <SideBarItems items={supportItems} theme={theme} />
+                    <Link href={"/#"}>
+                        <div className="flex items-center justify-start p-2 m-1 pt-6">
+                            <Image
+                                src={
+                                    theme == "dark"
+                                        ? "/darkLogout.png"
+                                        : "/lightLogout.png"
+                                }
+                                width={18}
+                                height={16}
+                                alt="LogoutIcon"
+                            />
+                            <span className="pl-2">Logout</span>
+                        </div>
+                    </Link>
                 </div>
+
                 <div>
                     <Link href={"/auth/login"} />
                 </div>

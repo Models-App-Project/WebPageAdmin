@@ -1,8 +1,7 @@
 "use client";
 
-import { setDark, setLight, toggleTheme } from "@/redux/theme";
+import { toggleTheme } from "@/redux/theme";
 import Image from "next/image";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const AuthLayout = ({

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Input from "../components/Input";
 import Link from "next/link";
 import Button from "../components/button";
-import { redirect } from "next/navigation";
 
 const Login = () => {
     const [email, setEmail] = useState("");
