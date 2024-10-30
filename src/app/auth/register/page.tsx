@@ -20,7 +20,7 @@ const Register = () => {
 
     return (
         <div className="container h-full flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold text-center text-black mb-2">
+            <h1 className="text-4xl font-bold text-center text-black mb-2 dark:text-white">
                 Create Account
             </h1>
             <p className="text-gray-400 text-center mb-10">

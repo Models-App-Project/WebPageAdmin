@@ -18,8 +18,8 @@ import Button from "../components/button";
         });
 
     return (
-        <div className="container h-full flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold text-center text-black mb-2">
+        <div className="container h-full text-black dark:text-white flex flex-col items-center justify-center">
+            <h1 className="text-4xl font-bold text-center  mb-2 dark:text-white">
                 Log in
             </h1>
             <p className="text-gray-400 text-center mb-10">
@@ -61,7 +61,9 @@ import Button from "../components/button";
                     </p>
                 </div>
 
-                <Button type="submit">Submit</Button>
+                <Link href={"/dashboard"}>
+                    <Button type="submit">Submit</Button>
+                </Link>
 
                 <p className="mt-6 text-center text-gray-400">
                     Do not have an account yet?{" "}
