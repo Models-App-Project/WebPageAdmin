@@ -7,14 +7,13 @@ import React, { useState } from "react";
 import Button from "../components/button";
 import Input from "../components/Input";
 
+type RegisterInputProps = {
+    email: string;
+};
 
-    type RegisterInputProps = {
-        email: string; 
-    };
-    
-    const ResetPassword = () => {
-        const [inputStates, setInputStates] = useState<RegisterInputProps>({
-            email: "",
+const ResetPassword = () => {
+    const [inputStates, setInputStates] = useState<RegisterInputProps>({
+        email: "",
     });
 
     return (
@@ -38,8 +37,6 @@ import Input from "../components/Input";
                                 email: e.target.value,
                             }))
                         } // Adicionar o onChange para atualizar o estado
-                        className="w-full px-4 py-2 mb-6 bg-transparent border-0 border-b border-gray-600 focus:outline-none"
-
                     />
 
                     <Button type="submit">Submit</Button>
@@ -58,6 +55,6 @@ import Input from "../components/Input";
             </div>
         </>
     );
-}
+};
 
 export default ResetPassword;
