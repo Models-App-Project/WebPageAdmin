@@ -5,9 +5,17 @@ import Input from "../components/Input";
 import Link from "next/link";
 import Button from "../components/button";
 
-const Login = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+
+    type RegisterInputProps = {
+        email: string;
+        password: string;
+    };
+    
+    const Login = () => {
+        const [inputStates, setInputStates] = useState<RegisterInputProps>({
+            email: "",
+            password: "",
+        });
 
     return (
         <div className="container h-full text-black dark:text-white flex flex-col items-center justify-center">
@@ -21,16 +29,26 @@ const Login = () => {
                 <Input
                     type="email"
                     placeholder="Username"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)} // Atualizar o valor de email
+                    value={inputStates.email}
+                        onChange={(e) =>
+                            setInputStates((state) => ({
+                                ...state,
+                                email: e.target.value,
+                            }))
+                        } // Atualizar o valor de email
                 />
                 <Input
                     type="password"
                     placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)} // Atualizar o valor de password
+                    value={inputStates.password}
+                        onChange={(e) =>
+                            setInputStates((state) => ({
+                                ...state,
+                                password: e.target.value,
+                            }))
+                        } // Atualizar o valor de password
                 />
-
+                
                 <div className="text-sm mb-3 text-center">
                     <p className="text-gray-400 text-base">
                         Forgot Password?{" "}
