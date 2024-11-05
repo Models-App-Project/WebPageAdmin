@@ -38,7 +38,7 @@ const ModelsPage: React.FC = () => {
   <input
     type="text"
     placeholder="Search"
-    className="bg-gray-800 text-white placeholder-gray-500 px-4 py-2 rounded-lg focus:outline-none w-full"
+    className="bg-neutral-800 text-white placeholder-gray-500 px-4 py-2 rounded-lg focus:outline-none w-full"
   />
 
   {/* Botão de filtros */}
@@ -51,7 +51,7 @@ const ModelsPage: React.FC = () => {
   {/* Botão de edição e de adicionar novo dentro de um contêiner flexível */}
   <div className="flex items-center space-x-4 ml-auto">
     {/* Botão de edição */}
-    <button className="flex items-center bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded-lg">
+    <button className="flex items-center bg-neutral-800 hover:bg-neutral-600 text-white px-3 py-2 rounded-lg">
       <FontAwesomeIcon icon={faPen} className="w-4 h-4 pr-1" />
       Edit
     </button>
@@ -70,14 +70,14 @@ const ModelsPage: React.FC = () => {
       {/* Grid de Modelos */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
         {models.map((model, index) => (
-          <div key={index} className="bg-gray-800 rounded-lg text-white">
-            <img src={model.imageUrl} alt={`${model.name}'s profile`} className="w-full h-52 object-cover rounded-md mb-4" />
+          <div key={index} className="bg-neutral-800 rounded-lg text-white">
+            <img src={model.imageUrl} alt={`${model.name}'s profile`} className="w-full h-52 rounded-md mb-4" />
             <div className='mb-4 mx-3'>
               <h2 className="text-lg font-semibold">{model.name}, {model.age}</h2>
               <p className="text-sm text-gray-400">@{model.username}</p>
             </div>
               <div className='flex'>
-              <button className="mt-3 mb-3 bg-gray-700 hover:bg-gray-600 text-white py-1 px-4 rounded ml-auto mx-3">Details</button>
+              <button className="mt-3 mb-3 bg-neutral-700 hover:bg-neutral-600 text-white py-1 px-4 rounded ml-auto mx-3">Details</button>
               </div>
             
           </div>
